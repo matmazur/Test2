@@ -36,6 +36,12 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.javacodegeeks.advanced</groupId>
+			<artifactId>advanced-java-part-15-java8.examples</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -5,21 +5,21 @@ import java.net.URLConnection;
 
 public class SampleClass {
     public static void main(String[] args) throws IOException {
-        fetch("http://www.google.com");
-        fetch("https://www.gry-online.pl");
+        SampleClass s  = new SampleClass();
+        s.fetch("http://www.google.com");
+        s.fetch("http://www.stackoverflow.com");
     }
 
-    private static void fetch(final String address) throws IOException {
+    private void fetch(final String address) throws IOException {
 
-        final URL url = new URL(address);
-        final URLConnection connection = url.openConnection();
-
+        URL url = new URL(address);
+        URLConnection conn = url.openConnection();
 
         try (final BufferedReader in = new BufferedReader(
-                new InputStreamReader(connection.getInputStream()))) {
+                new InputStreamReader(conn.getInputStream()))) {
 
             final StringBuilder sb = new StringBuilder();
-            in.lines().forEach(str -> sb.append(str));
+            in.lines().forEach(sb::append);
 
             System.out.println("Content size: " + sb.length());
         }
