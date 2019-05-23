@@ -6,8 +6,10 @@ import java.net.URLConnection;
 public class SampleClass {
     public static void main(String[] args) throws IOException {
         SampleClass s  = new SampleClass();
+        s.fetch("http://www.wp.pl");
         s.fetch("http://www.google.com");
-        s.fetch("http://www.stackoverflow.com");
+        s.fetch("http://www.ladbible.com/news/news-you-can-now-get-a-train-from-wigan-to-north-korea-20190523");
+        s.fetch("http://www.ladbible.com/entertainment/film-and-tv-george-rr-martin-says-ending-in-books-will-be-different-from-series-20190521");
     }
 
     private void fetch(final String address) throws IOException {
